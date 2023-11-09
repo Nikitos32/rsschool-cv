@@ -17,11 +17,37 @@ I liked Java and in the future I think that I will master it too. In my free tim
 
 ---  
 ### Skills:
-&#183; HTML5, CSS3  
-&#183; SCSS, SASS  
-&#183; JavaScript, Java Basic, C++, TypeScript  
-&#183; Git, GitHub  
-&#183; VS Code, Intelij IDEA, WebStorm  
-&#183; Adobe Photoshop, Adobe Lightroom  
+**&#183;** HTML5, CSS3  
+**&#183;** SCSS, SASS  
+**&#183;** JavaScript, Java Basic, C++, TypeScript  
+**&#183;** Git, GitHub  
+**&#183;** VS Code, Intelij IDEA, WebStorm  
+**&#183;** Adobe Photoshop, Adobe Lightroom  
 
+---
+### Code example:
+**Kids With the Greatest Number of Candies from LEETCODE:**  
+There are n kids with candies. You are given an integer array candies, where each candies[i]  
+represents the number of candies the ith kid has, and an integer extraCandies, denoting  
+the number of extra candies that you have. Return a boolean array result of length n, where  
+result[i] is true if, after giving the ith kid all the extraCandies, they will have the greatest  
+number of candies among all the kids, or false otherwise. Note that multiple kids can have the greatest number of candies.  
+
+```
+@param {number[]} candies  
+@param {number} extraCandies  
+@return {boolean[]}  
+
+var kidsWithCandies = function(candies, extraCandies) {  
+    result = [];  
+    for (let i = 0; i < candies.length; i++){  
+        candies[i] += extraCandies;  
+        if (candies[i] === Math.max.apply(null, candies)) result.push(true);  
+        else result.push(false);  
+        candies[i] -= extraCandies;  
+    }  
+    return result;  
+};  
+
+```
 ---
