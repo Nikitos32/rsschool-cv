@@ -27,27 +27,27 @@ I liked Java and in the future I think that I will master it too. In my free tim
 ---
 ### Code example:
 **Kids With the Greatest Number of Candies from LEETCODE:**  
-__There are n kids with candies. You are given an integer array candies, where each candies[i]__  
-__represents the number of candies the ith kid has, and an integer extraCandies, denoting__  
-__the number of extra candies that you have. Return a boolean array result of length n, where__  
-__result[i] is true if, after giving the ith kid all the extraCandies, they will have the greatest__  
-__number of candies among all the kids, or false otherwise. Note that multiple kids can have the__  
-__greatest number of candies.__  
+_There are n kids with candies. You are given an integer array candies, where each candies[i]_  
+_represents the number of candies the ith kid has, and an integer extraCandies, denoting_  
+_the number of extra candies that you have. Return a boolean array result of length n, where_  
+_result[i] is true if, after giving the ith kid all the extraCandies, they will have the greatest_  
+_number of candies among all the kids, or false otherwise. Note that multiple kids can have the_  
+_greatest number of candies._  
 
 ```
 @param {number[]} candies  
 @param {number} extraCandies  
 @return {boolean[]}  
 
-**var** kidsWithCandies = **function**(candies, extraCandies) {  
+var kidsWithCandies = function(candies, extraCandies) {  
     result = [];  
-    **for** (**let** i **=** 0; i **<** candies.length; i**++**){  
-        candies[i] **+=** extraCandies;  
-        **if** (candies[i] **===** Math.max.apply(null, candies)) result.push(true);  
-        **else** result.push(false);  
-        candies[i] **-=** extraCandies;  
+    for (let i = 0; i < candies.length; i++){  
+        candies[i] += extraCandies;  
+        if (candies[i] === Math.max.apply(null, candies)) result.push(true);  
+        else result.push(false);  
+        candies[i] -= extraCandies;  
     }  
-    **return** result;  
+    return result;  
 };  
 ```
 ---
@@ -56,3 +56,6 @@ __greatest number of candies.__
 **&#183;** RS Schools Course «JavaScript/Front-end. Stage 1» (in progress);  
 
 ---
+### Languages:
+**&#183;** English - Intermediate;  
+**&#183;** Russian - Native;  
