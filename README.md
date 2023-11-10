@@ -1,1 +1,1 @@
-# rsschool-cv
+https://Nikitos32.github.io/rsschool-cv/
