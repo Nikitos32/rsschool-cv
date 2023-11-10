@@ -41,6 +41,47 @@
         <li>VS Code, Intelij IDEA, WebStorm</li>
         <li>Adobe Photoshop, Adobe Lightroom</li>
     </ul>
+    <hr>
+    <h3>Code example:</h3>
+    <p>
+        <b>Kids With the Greatest Number of Candies from LEETCODE:</b>
+        <i>
+            There are n kids with candies. You are given an integer array candies, where each candies[i]
+            represents the number of candies the ith kid has, and an integer extraCandies, denoting
+            the number of extra candies that you have. Return a boolean array result of length n, where
+            result[i] is true if, after giving the ith kid all the extraCandies, they will have the greatest
+            number of candies among all the kids, or false otherwise. Note that multiple kids can have the
+            greatest number of candies.
+        </i>
+    </p>
+    <p class="code">
+        @param {number[]} candies <br>
+        @param {number} extraCandies <br>
+        @return {boolean[]}<br>
+        <br>
+        var kidsWithCandies = function(candies, extraCandies) {<br>
+        result = [];<br>
+        for (let i = 0; i < candies.length; i++){<br>
+        candies[i] += extraCandies;<br>
+        if (candies[i] === Math.max.apply(null, candies)) result.push(true);<br>
+        else result.push(false);<br>
+        candies[i] -= extraCandies;<br>
+        }<br>
+        return result;<br>
+        };<br>
+    </p>
+    <hr>
+    <h3>Courses:</h3>
+    <ul>
+        <li>JavaScript Manual on <a href="">learnjavascript.ru</a> (completed);</li>
+        <li>RS Schools Course «JavaScript/Front-end. Stage 1» (in progress);</li>
+    </ul>
+    <hr>
+    <h3>Languages:</h3>
+    <ul>
+        <li>English - Intermediate;</li>
+        <li>Russian - Native;</li>
+    </ul>
 </div>
 </body>
 </html>
